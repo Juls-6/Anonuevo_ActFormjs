@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1a001f, #2b0033, #0d001a);
+    color: #fff;
+}
+
+/* Container (Glass + Fade Effect) */
+.container {
+    width: 380px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 
+        0 0 25px rgba(255, 0, 200, 0.3),
+        0 0 60px rgba(128, 0, 128, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Title */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff66cc;
+    text-shadow: 0 0 10px #ff66cc;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #ffb3ec;
+}
+
+/* Inputs + Select */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: rgb(190, 66, 221);
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.password-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.password-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.strength-meter {
+    width: 100%;
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    background: red;
+    border-radius: 5px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+#strengthText {
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus {
+    border: 1px solid #ff66cc;
+    box-shadow: 0 0 10px #ff66cc;
+}
+
+/* Radio + Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(45deg, #ff66cc, #8000ff);
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff66cc;
+}
+
+/* Error Message */
+.error {
+    font-size: 12px;
+    color: #ff4d6d;
+    margin-top: 3px;
+}
+
+/* Small Glow Accent */
+.container::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: purple;
+    filter: blur(100px);
+    opacity: 0.2;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}
